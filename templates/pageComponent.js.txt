@@ -1,0 +1,28 @@
+import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import AppContainer from '../../components/AppContainer';
+import ContentContainer from '../../components/contentContainer';
+import Navigation from '../../components/nav/nav';
+
+const {{ properCase fileName }} = props => {
+    return (
+        <AppContainer isLoggedIn={true}>
+            <Navigation/>
+            <ContentContainer>
+                {{ properCase fileName }} page
+            </ContentContainer>
+        </AppContainer>
+    )
+}
+
+const mapStateToProps = (state) => {
+  return {};
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({}, dispatch);
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)({{ properCase fileName }});

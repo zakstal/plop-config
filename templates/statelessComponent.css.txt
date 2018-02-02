@@ -1,0 +1,4 @@
+/* plop v1 */
+.{{ dashCase fileName}} {
+
+}

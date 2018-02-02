@@ -1,0 +1,39 @@
+// plop v2
+import React, { Component } from 'react';
+{{#if isConnected}}
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+{{/if}}
+
+import './{{properCase fileName}}.css';
+
+class {{ properCase fileName }} extends Component {
+    render() {
+        const {
+            className,
+        } = this.props;
+
+        return (
+            <div
+                className={`{{ dashCase fileName}} ${className || ''}`}
+            >
+            </div>
+        )
+    }
+}
+
+{{#if isConnected}}
+const mapStateToProps = (state) => {
+  return {};
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({}, dispatch);
+};
+
+
+export default connect(mapStateToProps, mapDispatchToProps)({{properCase fileName}});
+
+{{else}}
+export default {{properCase fileName}};
+{{/if}}
